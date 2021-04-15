@@ -13,8 +13,9 @@
         }
 
         body {
-            background-color: yellow;
+            background-color: lightskyblue;
             text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
         form {
@@ -47,6 +48,22 @@
         a {
             color: #0066ff;
             text-decoration: none;
+            font-size: 14px;
+        }
+
+        .createDiv {
+            border-top: 1px solid rgba(0, 0, 0, .2);
+        }
+
+        .cna {
+            padding: 15px;
+            background-color: #33cc33;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, .2);
+            color: white;
+            font-weight: bolder;
+            font-size: 18px;
+
         }
     </style>
 </head>
@@ -61,7 +78,11 @@
         <input class="email" type="email" placeholder="Email address or phone number"><br><br>
         <input class="password" type="password" placeholder="Password"><br><br>
         <input class="login" type="submit" value="Log In"><br><br>
-        <a href="">Forget password?</a>
+        <a href="">Forget password?</a><br><br>
+        <div class="createDiv">
+            <br>
+            <button class="cna">Create New Account</button>
+        </div>
     </form>
 </body>
 
