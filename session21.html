@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 21</title>
+    <style>
+        body{
+            background-color: palevioletred;
+            text-align: center;
+        }
+        h1{
+            color: white;
+        }
+        canvas{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML CANVAS</h1>
+    </header>
+    <canvas id="myCanvas" width="400" height="400">
+
+    </canvas>
+    
+</body>
+<script>
+    var adem = document.getElementById("myCanvas")
+
+    var line = adem.getContext("2d");
+
+    line.moveTo(200,0);
+    line.lineTo(200,400);
+    line.stroke();
+
+    var square = adem.getContext("2d");
+    square.fillStyle = "yellow";
+    square.fillRect(0,0,200,400);
+
+    var circle = adem.getContext("2d");
+
+    circle.beginPath();
+    circle.arc(200,200,100,0,2*Math.PI);
+    circle.fillStyle = "red";
+    circle.fill();
+    circle.lineWidth = "10";
+    circle.strokeStyle = "blue";
+    circle.stroke()
+
+</script>
+</html>
