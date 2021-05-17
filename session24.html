@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 24</title>
+    <style>
+        body{
+            background-color: paleturquoise;
+            text-align: center;
+        }
+        p{
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Web Storage</h1>
+    </header>
+    <p id="data"></p>
+    <h2>My Location</h2>
+    <p id="location"></p>
+    <button onclick="getLocation()">Get Location</button>
+    <h2>Name:</h2>
+    <p id="myName">Change Name</p>
+    <button onclick="myName('Adem')">Adem</button>
+    <button onclick="myName('Filiz')">Filiz</button>
+    <button onclick="myName('Emre')">Emre</button>
+    
+</body>
+<script>
+    function myName(namee){
+        document.getElementById("myName").innerText = namee;
+    }
+
+
+    function getLocation(){
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }
+        else{
+            document.getElementById("location").innerText=
+            "No Location Available";
+        }
+        function showPosition(position){
+            document.getElementById("location").innerText=
+            "latitude:"+position.coords.latitude+"longitude:"
+            +position.coords.longitude;
+        }
+    }
+
+
+
+    localStorage.setItem("Adem","Session 24");
+    document.getElementById("data").innerHTML = 
+    localStorage.getItem("Adem");
+    localStorage.removeItem("Adem");
+
+    localStorage.Adem = "UK";
+    document.getElementById("data").innerText = 
+    localStorage.Adem;
+
+    sessionStorage.day = "Sunday";
+    document.getElementById("data").innerText = 
+    sessionStorage.day;
+</script>
+</html>
