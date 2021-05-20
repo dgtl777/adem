@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 25</title>
+    <style>
+        body{
+            background-color: bisque;
+            text-align: center;
+        }
+
+        #cat,#dog,#flower{
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            margin: auto;
+        }
+        img{
+            width: 300px;
+            height: 200px;
+        }
+        .main{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Drag and Drop</h1>
+    </header>
+    <h1 id="ans"></h1>
+    <div class="main">
+    <div id="cat" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <br><br><br>Cat</div>
+    <div id="dog" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <br><br><br>Dog</div>
+    <div id="flower" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <br><br><br>Flower</div>
+    </div>
+    
+    <br><br>
+    <img ondragstart="drag(event)" draggable="true" id="drag" src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg" alt="">
+
+</body>
+<script>
+    function allowDrop(ev){
+        ev.preventDefault();
+    }
+    function drag(ev){
+        ev.dataTransfer.setData("data",ev.target.id);
+    }
+    function drop(ev){
+        ev.preventDefault();
+        if(ev.path[0].id == "dog"){
+            document.getElementById("ans").innerText = "Wrong";
+        }
+        else if(ev.path[0].id == "cat"){
+            document.getElementById("ans").innerText = "Wrong";
+        }
+        else{
+            document.getElementById("ans").innerText = "Right";
+        }
+
+        var data = ev.dataTransfer.getData("data");
+        ev.target.appendChild(document.getElementById(data));
+    }
+</script>
+</html>
