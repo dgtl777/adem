@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 30</title>
+    <style>
+        body{
+            background-color: skyblue;
+            text-align: center;
+        }
+        p{
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body onload="load()">
+    <audio src="music.mp3" autoplay></audio>
+    <header>
+        <h1>Javascript Functions</h1>
+    </header>
+    <button onclick="clickMe()">Click Me!</button><br><br>
+    <form onsubmit="submitForm()">
+        <input type="text" name="" id=""><br><br>
+        <input type="submit" value="Submit Form" name="" id="">
+    </form>
+    <p onmouseout="out()">Dont Leave Me!</p>
+    <p ondblclick="double()">Double click on the sentence</p>
+    <p onmouseover="over()">Move Over the Sentence</p>
+</body>
+<script>
+    function out(){
+        alert("You left me!");
+    }
+    function load(){
+        alert("Page Loaded");
+    }
+    function clickMe(){
+        alert("You Clicked the Button!");
+    }
+    function submitForm(){
+        alert("Form Submitted");
+    }
+    function double(){
+        alert("You Double clicked on the Sentence");
+    }
+    function over(){
+        alert("You moved over the sentence");
+    }
+    
+</script>
+</html>
