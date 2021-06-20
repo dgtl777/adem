@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 33</title>
+    <style>
+        body {
+            background-color: skyblue;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+            animation-name: changeColor;
+            animation-duration: 4s;
+        }
+
+        @keyframes changeColor {
+            0% {
+                color: red;
+            }
+
+            25% {
+                color: blue;
+            }
+
+            50% {
+                color: green;
+            }
+
+            75% {
+                color: orange;
+            }
+
+            100% {
+                color: white;
+            }
+
+        }
+
+        #ball {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            border-radius: 50%;
+            margin: auto;
+            animation-name: bounce;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+
+        @keyframes bounce {
+            from {
+                border-radius: 0;
+                transform: rotate(0);
+                margin-top: 0px;
+            }
+
+            to {
+                border-radius: 50%;
+                transform: rotate(360deg);
+                margin-top: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Animation</h1>
+    </header>
+    <div id="ball">
+
+    </div>
+
+</body>
+
+</html>
