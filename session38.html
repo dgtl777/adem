@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 38</title>
+    <style>
+        body{
+            background-color: skyblue;
+            text-align: center;
+        }
+        h1{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Regex(Regular Expression)</h1>
+    </header>
+    <input type="text" name="" id="user">
+    <button onclick="test()">Test</button>
+    <h2>Result</h2>
+    <h2 id="result"></h2>
+    
+</body>
+<script>
+    function test(){
+        var test = document.getElementById("user").value;
+        var patt = /ADEM([0-9]){3}/i;
+        if((test.toUpperCase()).match(patt)!=null){
+            document.getElementById("result").innerText = 
+            "Welcome "+test;
+            window.location.assign("https://www.google.com/");
+        }
+        else{
+            document.getElementById("result").innerText = 
+            "User Not Found";
+        }
+    }
+</script>
+</html>

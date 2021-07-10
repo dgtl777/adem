@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 39</title>
+    <style>
+        body {
+            background-color: palevioletred;
+            text-align: center;
+            font-family: 'tahoma', 'san-serif';
+        }
+
+        h1 {
+            color: white;
+        }
+
+        #img1,
+        #img2 {
+            width: 300px;
+            display: none;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Guess The Correct Answer!</h1>
+    </header>
+    <audio src="music.mp3" autoplay></audio>
+    <h2>What has to be broken before you can use it?</h2>
+    <input id="ans1" type="text">
+    <button onclick="ans1()">submit</button><br><br>
+    <img id="img1" src="https://solidstarts.com/wp-content/uploads/when-can-babies-eat-eggs-480x320.jpg" alt="">
+
+    <h2>I’m tall when I’m young, and I’m short when I’m old. What am I?</h2>
+    <input id="ans2" type="text">
+    <button onclick="ans2()">submit</button><br><br>
+    <img id="img2" src="https://images-na.ssl-images-amazon.com/images/I/71hL%2BfOdYqL._SL1500_.jpg" alt="">
+
+</body>
+<script>
+    console()
+    function ans1() {
+        var ans1 = document.getElementById("ans1")
+            .value;
+        if (ans1.toUpperCase() == "EGG") {
+            document.getElementById("img1").style
+                .display = "block";
+        }
+    }
+
+    function ans2() {
+        var ans1 = document.getElementById("ans2")
+            .value;
+        if (ans1.toUpperCase() == "CANDLE") {
+            document.getElementById("img2").style
+                .display = "block";
+        }
+    }
+</script>
+
+</html>
